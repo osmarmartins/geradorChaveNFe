@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+            <div class="container-fluid">
+                <a class="navbar-brand" onclick="home()" href="#">FISCAL</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="home()" href="#">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                                <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                              </svg>                              
+                              Home <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
+                                role="button" 
+                                data-toggle="dropdown" 
+                                aria-haspopup="true" aria-expanded="false">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-ul" viewBox="0 0 16 16">
+                                  <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                                </svg>                                
+                                Serviços
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" onclick="nfe()" href="#">Chave NF-e</a>
+                                <a class="dropdown-item" onclick="nfce()" href="#">Chave CF-e / NFC-e</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" target="_blank" href="https://www.futurainformatica.com.br">Código fonte</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" target="_blank" href="https://www.futurainformatica.com.br">Visite o site</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                          <a class="dropdown-item bg-info" style="color: white;" target="_blank" href="https://www.github.com/osmarmartins">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                            </svg>
+                          </a>
+                        </li>
+
+                        <li class="nav-item">
+                          <a class="dropdown-item bg-info" style="color: white;" target="_blank" href="https://www.futurainformatica.com.br">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
+                              <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/>
+                            </svg>
+                          </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>            
+
+        <div class="container mt-3">
+            <div id="conteudo"></div>
+
+            <div id="resposta"></div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
+        <script>
+          home();
+
+          class Chave {
+            uf = '';
+            anoMes = '';
+            cnpj = '';
+            modelo = '';
+            serie = '';
+            nNf = '';
+            tipoEmissao = '1'
+            cNf = '';
+            cDV = '';
+            serializada = '';
+            modulo = '';
+            nCFe = '';
+          }
+
+          let chave = new Chave();
+
+          function serializarCupom(modulo, nCFe) {
+            cNf = Math.floor(Math.random() * 1000000);
+            chave = new Chave;
+            chave.uf = document.getElementById('uf').value.padStart(2, '0');
+            chave.anoMes = document.getElementById('anoMes').value.padStart(4, '0');
+            chave.cnpj = document.getElementById('cnpj').value.padStart(14, '0');
+            chave.modelo = '59';
+            chave.modulo = modulo.padStart(9, '0');
+            chave.nCFe = nCFe.padStart(6, '0');
+            chave.tipoEmissao = '1';
+            chave.cNf = (''+cNf).padStart(6, '0');
+            chave.cDV = '0';
+            chave.serializada = chave.uf + chave.anoMes + chave.cnpj + chave.modelo + chave.modulo + chave.nCFe + chave.tipoEmissao + chave.cNf;
+            calcularDV(chave);
+          }
+
+          function serializarNFe(nNf) {
+            cNf = Math.floor(Math.random() * 100000000);
+            chave = new Chave;
+            chave.uf = document.getElementById('uf').value.padStart(2, '0');
+            chave.anoMes = document.getElementById('anoMes').value.padStart(4, '0');
+            chave.cnpj = document.getElementById('cnpj').value.padStart(14, '0');
+            chave.modelo = '55';
+            chave.serie = document.getElementById('serie').value.padStart(3, '0');
+            chave.nNf = nNf.padStart(9, '0')
+            chave.tipoEmissao = '1';
+            chave.cNf = (''+cNf).padStart(8, '0');
+            chave.cDV = '0';
+            chave.serializada = chave.uf + chave.anoMes + chave.cnpj + chave.modelo + chave.serie + chave.nNf + chave.tipoEmissao + chave.cNf;
+            calcularDV(chave);
+          }
+
+          function calcularDV(chave) {
+            const peso = '4329876543298765432987654329876543298765432';
+            const nota = chave.serializada;
+            let dv = 0;
+            let soma = 0;
+            for(let i=0; i < 44; i++) {
+              produto = Math.floor(peso.substr(i, 1)) * Math.floor(nota.substr(i, 1)); 
+              soma += produto;
+            }
+            dv = soma % 11;
+            chave.cDV = (11 - dv) > 9 ? 0 : 11 - dv;    
+            chave.serializada = nota + chave.cDV;        
+          }
+
+          // ------------------- HOME
+          function home(){
+              resposta.innerHTML = '';
+              conteudo.innerHTML = `
+              <div class="jumbotron mt-3">
+                  <h1 class="text-center">Gerador de chaves NF-e e NFC-e</h1>
+                  </div>
+              `;
+          };
+
+          function camposFiscais() {
+            return `
+                      <div class="row">
+                        <div class="col form-group">
+                            <label for="anoMes">Ano e mês da emissão</label>
+                            <input type="text" class="form-control" 
+                                name="anoMes" id="anoMes" value="${anomes}"
+                                placeholder="AAMM">
+                            <small id="msg-anoMes" class="form-text text-muted">Preencha dois dígitos para o ano e dois dígitos para o mês. Para abril de 2021 preencha com 2104</small>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col form-group">
+                            <label for="uf">UF</label>
+                            <input type="text" class="form-control" 
+                                name="uf" id="uf"
+                                placeholder="Nº do estado na tabela do IBGE" minlength="2">
+                            <small id="msg-uf" class="form-text text-muted">Preencha com dois dígitos. Para o Ceará informe 23</small>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col form-group">
+                            <label for="cnpj">CNPJ do emitente</label>
+                            <input type="text" class="form-control" 
+                                name="cnpj" id="cnpj"
+                                placeholder="00111222333344">
+                            <small id="msg-cnpj" class="form-text text-muted">Somente os dígitos do CNPJ. Não preencher com a pontuação/máscara</small>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-6 form-group">
+                            <label for="nNfInicial">Nº da nota fiscal inicial</label>
+                            <input type="text" class="form-control" 
+                                name="nNfInicial" id="nNfInicial"
+                                placeholder="000000000">
+                            <small id="msg-nNfInicial" class="form-text text-muted">Número inicial da sequência da NF-e com 9 dígitos.</small>
+                        </div>
+
+                        <div class="col-6 form-group">
+                            <label for="nNfFinal">Nº da nota fiscal final</label>
+                            <input type="text" class="form-control" 
+                                name="nNfFinal" id="nNfFinal"
+                                placeholder="000000000">
+                            <small id="msg-nNfFinal" class="form-text text-muted">Número final da sequência da NF-e com 9 dígitos.</small>
+                        </div>
+                      </div>
+
+            `;
+          }
+
+          // ------------------- NF-e
+          function nfe() {
+            resposta.innerHTML = '';
+            now = new Date();
+            mes = now.getMonth() + 1;
+            mes = mes < 9 ? '0'+mes : mes;
+            ano = now.getYear() - 100;
+            anomes = `${ano}${mes}`;
+            conteudo.innerHTML = `
+                  <h1>Gerador de Chave para NF-e</h1>
+                  <form>
+                      ${camposFiscais()}
+
+                      <div class="row">
+                        <div class="col form-group">
+                            <label for="serie">Série</label>
+                            <input type="text" class="form-control" 
+                                name="serie" id="serie"
+                                placeholder="000">
+                            <small id="msg-serie" class="form-text text-muted">Série da NF-e com 3 dígitos.</small>
+                        </div>
+                      </div>
+
+                      <div class="row mb-4">
+                        <div class="col">
+                          <button type="submit" onclick="gerarChaveNFe(event)" class="btn btn-primary">Gerar chave</button>
+                          <button type="button" onclick="nfe()" class="btn btn-secondary ml-2">Limpar</button>
+                        </div>
+                      </div>  
+                  </form>
+              `;
+          }
+
+          function gerarChaveNFe(event) {
+            event.preventDefault();
+            let nfInicial = document.getElementById('nNfInicial').value;
+            let nfFinal = document.getElementById('nNfFinal').value;
+            let result = '';
+            
+            for(let i=nfInicial; i<=nfFinal; i++) {
+              serializarNFe(''+i);
+              result += ` 
+                <div class="row"> 
+                  <div class="col"> 
+                    <input readonly="true" class="form-control mb-2" value="${chave.serializada}"> 
+                  </div> 
+                </div> `;
+            }           
+            resposta.innerHTML = result + '</br> </br>';
+
+          }
+
+          // ------------------- NFC-e / CF-e
+          function nfce() {
+            resposta.innerHTML = '';
+            now = new Date();
+            mes = now.getMonth() + 1;
+            mes = mes < 9 ? '0'+mes : mes;
+            ano = now.getYear() - 100;
+            anomes = `${ano}${mes}`;
+            conteudo.innerHTML = `
+                  <h1>Gerador de Chave para NFC-e / CF-e</h1>
+                  <form>
+                      ${camposFiscais()}
+
+                      <div class="row">
+                        <div class="col form-group">
+                            <label for="dispositivo">Serial do módulo fiscal (SAT)</label>
+                            <input type="text" class="form-control" 
+                                name="dispositivo" id="dispositivo"
+                                placeholder="Nº de série do cadastro do emissor de cupom fiscal">
+                            <small id="msg-dispositivo" class="form-text text-muted">Informe o serial do dispositivo com até 8 dígitos</small>
+                        </div>
+                      </div>
+
+                      <div class="row mb-4">
+                        <div class="col">
+                          <button type="submit" onclick="gerarChaveCupom(event)" class="btn btn-primary">Gerar chave</button>
+                          <button type="button" onclick="nfce()" class="btn btn-secondary ml-2">Limpar</button>
+                        </div>
+                      </div>  
+                  </form>
+              `;
+          }
+
+          function gerarChaveCupom(event) {
+            event.preventDefault();
+            let nfInicial = document.getElementById('nNfInicial').value;
+            let nfFinal = document.getElementById('nNfFinal').value;
+            let dispositivo = document.getElementById('dispositivo').value;
+            let result = '';
+            
+            for(let i=nfInicial; i<=nfFinal; i++) {
+              serializarCupom(dispositivo, ''+i);
+              result += ` 
+                <div class="row"> 
+                  <div class="col"> 
+                    <input readonly="true" class="form-control mb-2" value="${chave.serializada}"> 
+                  </div> 
+                </div> `;
+            }           
+            resposta.innerHTML = result + '</br> </br>';
+
+          }
+
+        </script>
+
+    </body>
+</html>
