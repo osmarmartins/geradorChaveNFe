@@ -10,7 +10,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-info">
             <div class="container-fluid">
-                <a class="navbar-brand" onclick="home()" href="#">FISCAL</a>
+                <a class="navbar-brand" onclick="home()" href="#">FISCAL (v1.1)</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -110,10 +110,9 @@
             chave.modelo = '59';
             chave.modulo = modulo.padStart(9, '0');
             chave.nCFe = nCFe.padStart(6, '0');
-            chave.tipoEmissao = '1';
             chave.cNf = (''+cNf).padStart(6, '0');
             chave.cDV = '0';
-            chave.serializada = chave.uf + chave.anoMes + chave.cnpj + chave.modelo + chave.modulo + chave.nCFe + chave.tipoEmissao + chave.cNf;
+            chave.serializada = chave.uf + chave.anoMes + chave.cnpj + chave.modelo + chave.modulo + chave.nCFe + chave.cNf;
             calcularDV(chave);
           }
 
@@ -195,7 +194,7 @@
                             <input type="text" class="form-control" 
                                 name="nNfInicial" id="nNfInicial"
                                 placeholder="000000000">
-                            <small id="msg-nNfInicial" class="form-text text-muted">Número inicial da sequência da NF-e com 9 dígitos.</small>
+                            <small id="msg-nNfInicial" class="form-text text-muted">Número inicial da sequência (9 dígitos para NF-e e 6 dígitos para CFe)</small>
                         </div>
 
                         <div class="col-6 form-group">
@@ -203,7 +202,7 @@
                             <input type="text" class="form-control" 
                                 name="nNfFinal" id="nNfFinal"
                                 placeholder="000000000">
-                            <small id="msg-nNfFinal" class="form-text text-muted">Número final da sequência da NF-e com 9 dígitos.</small>
+                            <small id="msg-nNfFinal" class="form-text text-muted">Número final da sequência (9 dígitos para NF-e e 6 dígitos para CFe)</small>
                         </div>
                       </div>
 
@@ -281,7 +280,7 @@
                             <input type="text" class="form-control" 
                                 name="dispositivo" id="dispositivo"
                                 placeholder="Nº de série do cadastro do emissor de cupom fiscal">
-                            <small id="msg-dispositivo" class="form-text text-muted">Informe o serial do dispositivo com até 8 dígitos</small>
+                            <small id="msg-dispositivo" class="form-text text-muted">Informe o serial do dispositivo com até 9 dígitos</small>
                         </div>
                       </div>
 
